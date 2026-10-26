@@ -40,6 +40,10 @@ class CodePage(Enum):
     E910_INT = b'\xfe'                # ASCII + 910 Emulation (International)
     CUSTOM = b'\xff'
 
+    @classmethod
+    def names(cls):
+        return cls._member_names_
+
 
 class ControlCode(Enum):
     """ Control Codes for CBM910"""
